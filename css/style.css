@@ -20,7 +20,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     cursor: none;
-    background-image: url(/img/landingbg-1.webp);
+    background-image: url(../img/landingbg-1.webp);
     background-size: cover;
     background-attachment: fixed;
 }
@@ -89,7 +89,7 @@ nav .nav-links li:hover {
 }
 
 .landing {
-    background-image: url(/img/landsiteimg.webp);
+    background-image: url(../img/landsiteimg.webp);
     height: 100vh;
     background-size: 100% 100%;
 }
@@ -241,7 +241,7 @@ section .left-section {
     .landing {
         height: 80vh;
         background-size: 100% 100%;
-        background-image: url(/img/landcenterbg.webp);
+        background-image: url(../img/landcenterbg.webp);
         position: relative;
     }
 
