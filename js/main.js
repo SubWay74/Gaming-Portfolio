@@ -8,10 +8,29 @@ function cursorMove(e) {
 
 window.addEventListener("mousemove", cursorMove)
 
-// anime({
-//     targets: ".kekw",
-//     top: "50%",
-//     left: "50%",
+anime({
+    targets: '.social ul li',
+    translateX: 50,
+    scale: 1.2,
+    rotate: '1turn',
+    direction: 'alternate',
+    easing: 'easeInOutSine',
+    delay: anime.stagger(300) // increase delay by 100ms for each elements.
+});
 
-//     duration: 2000,
-// });
+const homeBtn = document.getElementById("home");
+const skillsBtn = document.getElementById("skills");
+
+homeBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+})
+
+skillsBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 600,
+        behavior: "smooth"
+    })
+})

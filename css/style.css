@@ -53,6 +53,7 @@ hr {
     background-image: var(--h1);
     height: .5em;
     border: none;
+    margin: 2em 0em;
 }
 
 nav {
@@ -67,6 +68,19 @@ nav {
 
 nav .logo img {
     width: 69px;
+    animation: rotate-change 20s infinite;
+}
+
+@keyframes rotate-change {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 nav .logo h1 {
@@ -81,11 +95,13 @@ nav .nav-links li {
     padding: 0px 10px;
     height: inherit;
     font-weight: 700;
+    text-shadow: 0 0 10px var(--text-color);
 }
 
 nav .nav-links li:hover {
     background-color: var(--main-color);
     color: var(--second-color);
+    text-shadow: 0 0 10px black;
 }
 
 .landing {
@@ -94,16 +110,34 @@ nav .nav-links li:hover {
     background-size: 100% 100%;
 }
 
+.landing .land-txt {
+    width: 50%;
+    color: white;
+    font-size: 35px;
+    padding: 2em 0em 0em 2em;
+    text-shadow: 0 0 12px var(--text-color);
+}
+
+.landing .land-txt h1 span {
+    color: var(--main-color);
+    text-shadow: 0 0 35px var(--second-color);
+}
+
 .content {
     position: relative;
     position: relative;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     padding: 30px 0px;
 }
 
+.content .social ul {
+    justify-content: flex-start;
+    padding-top: 1em;
+}
+
 .content .social li{
-    transition: all ease-in-out .5s;
+    /* transition: all ease-in-out .5s; */
 }
 
 .content .social li img{
@@ -124,60 +158,25 @@ section .header {
     background-image: var(--liner);
     color: var(--second-color);
     padding: 10px;
+    font-size: 30px;
+    text-shadow: 0 0 12px black;
 }
 
-
-
-section .right-section,
-section .left-section {
-    font-size: 35px;
-    color: var(--second-color);
-    padding-top: 2em;
-    padding-left: 2em;
-    width: 45%;
-}
-
-section .left-section {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.content .right-section span {
-    color: #D30000;
-}
-
-.content .right-section .social {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: flex-start;
-}
-
-.content .right-section .social button {
-    width: 8em;
-    padding: .5em;
-    margin: 1em 0px;
-    border-radius: .5em;
-    font-weight: bold;
-    border: 1px solid white;
-    cursor: none;
-    color: var(--second-color);
-}
 
 .head-skill {
-    background: #FFFFFF;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     position: relative;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 0 0 12px var(--text-color);
+
 }
 
 .head-skill::before {
     content: "";
     position: absolute;
-    bottom: -10%;
-    left: 0;
+    bottom: -20%;
+    left: 40%;
     width: 20%;
     height: 5px;
     background: var(--h1);
@@ -186,53 +185,51 @@ section .left-section {
 }
 
 .head-skill:hover::before {
-    width: 50%;
+    width: 40%;
+    left: 30%;
 }
 
-.content p {
-    color: var(--second-color);
-    font-size: 35px;
-    padding-top: 1em;
-}
 
-.left-section .ele {
-    width: 6em;
-    height: 10em;
-}
 
-.left-section  .eleone { transform: translate(50%, 0%); }
-.left-section .eletwo {z-index: 1;}
-.left-section  .eleThree { transform: translate(-50%, 0%);}
-
-.left-section .ele img {
+.content .slider {
     width: 100%;
-    height: 100%;
-    border-radius: 1em;
-}
-
-
-.left-section .ranks-sec,
-.left-section .skills-sec {
-    display: flex;
+    padding: 3em;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.left-section .ranks-sec li,
-.left-section .skills-sec li  {
-    width: calc(95% / 2);
-    height: 5em;
-    margin: 5px;
-    border-radius: 10px;
+.content .slider li {
+    width: 13em;
+    background-image: linear-gradient(180deg, black, #431616);
+    height: 23em;
+    color: white;
+    border-radius: 0 30px 0 30px;
+    transition: all ease-in-out .5s;
+    box-shadow: 0px 0px 10px 3px white;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
 }
 
-.left-section .ranks-sec li img{
-    width: inherit;
+.content .slider li:hover {
+    transform: scale(1.1);
 }
 
-.left-section .skills-sec li img {
-    width: 175px;
-    height: 175px;
-    border-radius: 30px;
+.content .slider li img {
+    width: 100%;
+    height: 10em;
+    border-radius: inherit;
+}
+
+.content .slider li h1 {
+    padding: 10px;
+    text-align: center;
+    height: 3em;
+    text-shadow: 0  0 5px var(--text-color);
+}
+
+.content .slider li p {
+    padding: 10px;
+    text-shadow: 0  0 10px black;
 }
 
 
@@ -245,39 +242,34 @@ section .left-section {
         position: relative;
     }
 
-    .landing h1 {
+    .landing .land-txt  {
         text-align: center;
         position: absolute;
-        top: 60%;
-        transform: translate(0%, -50%);
-        animation: color-change 5s infinite;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0;
     }
 
-    @keyframes color-change {
+    .landing .land-txt h1 {
+        animation: opacity-change 5s infinite;
+    }
+
+    .content .social ul {
+        justify-content: center;
+    }
+
+
+    @keyframes opacity-change {
         0% {
-            color: #ffffff00;
+            opacity: 0;
         }
         50% {
-            color: white;
+            opacity: 1;
         }
         100% {
-            color: #ffffff00;
+            opacity: 0;
         }
-    }
-
-    .social {
-        position: absolute;
-        bottom: 0;
-    }
-
-    .content {
-        display: block;
-        padding: 1em;
-    }
-
-    .content .right-section, 
-    .content .left-section {
-        width: 100%;
-        padding: 10px;
     }
 }
