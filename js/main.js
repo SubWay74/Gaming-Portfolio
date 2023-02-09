@@ -17,14 +17,13 @@ skillsBtn.addEventListener("click", () => {
     })
 });
 
-
 function cursorMove(e) {
     cursor.style.top = `${e.pageY}px`
     cursor.style.left = `${e.pageX}px`
 }
 window.addEventListener("mousemove", cursorMove)
 
-const music = new Audio('../Rebirth.mp3');
+const music = new Audio('/Rebirth.mp3');
 const playBtn = document.getElementById("playbtn");
 const musicLine = document.querySelector(".musics p");
 music.setAttribute("preload", "none");
@@ -34,15 +33,13 @@ let getTimePercentage;
 playBtn.addEventListener("click", () => {
     if(!playingMusic) {
         music.play()
-        playBtn.setAttribute("src", "../img/play-audio.webp");
-
+        playBtn.setAttribute("src", "img/play-audio.webp");
         playingMusic = true;
     } else {
         music.pause();
-        playBtn.setAttribute("src", "../img/no-audio.webp");
+        playBtn.setAttribute("src", "img/no-audio.webp");
         playingMusic = false;
     }
-
 })
 
 setInterval( () => {
