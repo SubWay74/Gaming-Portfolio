@@ -305,6 +305,16 @@ section .header {
     white-space: normal;
 }
 
+
+.photoshop-img {
+    height: 15em;
+}
+
+.photoshop-img img {
+    height: 15em;
+}
+
+
 #footer {
     width: 100%;
     /* height: 50vh; */
@@ -371,11 +381,6 @@ section .header {
     width: 5em;
 }
 
-@media screen and (min-width: 1200px) {
-	.item {
-		width: 20%;	
-	}
-}
 @media (max-width: 800px) {
 
     .item {
