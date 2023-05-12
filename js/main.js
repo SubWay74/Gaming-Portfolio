@@ -23,7 +23,7 @@ function cursorMove(e) {
 }
 window.addEventListener("mousemove", cursorMove)
 
-const music = new Audio('../audio/Rebirth.mp3');
+const music = new Audio('/Rebirth.mp3');
 const playBtn = document.getElementById("playbtn");
 const musicLine = document.querySelector(".musics p");
 music.setAttribute("preload", "none");
